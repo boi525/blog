@@ -50,11 +50,11 @@
 				<ul>
 					<ul>
 					 
-						<li><a href="/">Home</a></li>
+						<li><a href="/">首页</a></li>
 					
-						<li><a href="/archives">Archives</a></li>
+						<li><a href="/archives">文章</a></li>
 					
-						<li><a href="/about">About</a></li>
+						<li><a href="/about">关于</a></li>
 					
 					<li>
  					
@@ -92,14 +92,17 @@
     <div class="article-content">
         
         <p>玩过博客感觉挺好玩的！写篇博客把流程总结下。这是我的github地址<a href="https://github.com/boi525" target="_blank" rel="external">github</a>。详细流程可参考<a href="http://www.isetsuna.com/hexo/theme-plugin" target="_blank" rel="external">setsun’s blog</a>.</p>
-<h2 id="首先，第一步"><a href="#首先，第一步" class="headerlink" title="首先，第一步"></a>首先，第一步</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h3 id="1、使用npm安装hexo"><a href="#1、使用npm安装hexo" class="headerlink" title="1、使用npm安装hexo"></a>1、使用npm安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
+<h3 id="2、初始化hexo"><a href="#2、初始化hexo" class="headerlink" title="2、初始化hexo"></a>2、初始化hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hexo init blog</div></pre></td></tr></table></figure>
+<h3 id="3、生成静态页面"><a href="#3、生成静态页面" class="headerlink" title="3、生成静态页面"></a>3、生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
+<h3 id="4、启动本地服务，进行文章预览调试"><a href="#4、启动本地服务，进行文章预览调试" class="headerlink" title="4、启动本地服务，进行文章预览调试"></a>4、启动本地服务，进行文章预览调试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h3 id="5、修改-config-yml文件"><a href="#5、修改-config-yml文件" class="headerlink" title="5、修改_config.yml文件"></a>5、修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  	<span class="built_in">type</span>: git</div><div class="line">  	repository:**********</div><div class="line">  	branch: gh-pages</div></pre></td></tr></table></figure>
+<h3 id="6、下载安装hexo-deployer-git"><a href="#6、下载安装hexo-deployer-git" class="headerlink" title="6、下载安装hexo-deployer-git"></a>6、下载安装hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h3 id="7、发布到github"><a href="#7、发布到github" class="headerlink" title="7、发布到github"></a>7、发布到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
+<p><strong>此时需要注意:</strong> 打开网站会出现乱掉的情况，由于需要配置相应的路径</p>
+<h3 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root: /blog/</div></pre></td></tr></table></figure>
+<p>“blog”是github仓库名</p>
+<h3 id="重新发布"><a href="#重新发布" class="headerlink" title="重新发布"></a>重新发布</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
 
         
         
@@ -157,7 +160,7 @@
         
           <li>
             
-            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            	<a href="https://github.com/boi525" target="_blank" title="My Github">My Github</a>
             
           </li>
         
@@ -189,8 +192,8 @@
 	
 	
 	<section class="info">
-		<p> Hello ,I&#39;m Larry Page in Google. <br/>
-			This is my blog,believe it or not.</p>
+		<p> H i , I&#39;m ChangBin <br/>
+			骏马秋风冀北，杏花春雨江南。</p>
 	</section>
 	 
 	<div class="social-font" class="clearfix">
