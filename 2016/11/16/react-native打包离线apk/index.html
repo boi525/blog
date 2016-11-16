@@ -4,19 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>changbin&#39;s blog</title>
+    <title>React Native打包离线apk | changbin&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Changbin">
     
 
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="changbin's blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+    <meta name="description" content="1、生成秘钥文件（在工程目录下）1keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+2、把刚生成的秘钥文件copy到android/app下3、在android/gradle.properties最后面添加如下内容:12">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React Native打包离线apk">
+<meta property="og:url" content="http://yoursite.com/2016/11/16/react-native打包离线apk/index.html">
 <meta property="og:site_name" content="changbin's blog">
+<meta property="og:description" content="1、生成秘钥文件（在工程目录下）1keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+2、把刚生成的秘钥文件copy到android/app下3、在android/gradle.properties最后面添加如下内容:12">
+<meta property="og:updated_time" content="2016-11-16T14:02:29.500Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="changbin's blog">
+<meta name="twitter:title" content="React Native打包离线apk">
+<meta name="twitter:description" content="1、生成秘钥文件（在工程目录下）1keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+2、把刚生成的秘钥文件copy到android/app下3、在android/gradle.properties最后面添加如下内容:12">
 
     
     <link rel="alternative" href="/atom.xml" title="changbin&#39;s blog" type="application/atom+xml">
@@ -70,12 +77,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/11/16/react-native打包离线apk/" title="React Native打包离线apk" itemprop="url">React Native打包离线apk</a>
@@ -89,9 +94,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h3 id="1、生成秘钥文件（在工程目录下）"><a href="#1、生成秘钥文件（在工程目录下）" class="headerlink" title="1、生成秘钥文件（在工程目录下）"></a>1、生成秘钥文件（在工程目录下）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000</div></pre></td></tr></table></figure>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、生成秘钥文件（在工程目录下）"><span class="toc-number">1.</span> <span class="toc-text">1、生成秘钥文件（在工程目录下）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、把刚生成的秘钥文件copy到android-app下"><span class="toc-number">2.</span> <span class="toc-text">2、把刚生成的秘钥文件copy到android/app下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在android-gradle-properties最后面添加如下内容"><span class="toc-number">3.</span> <span class="toc-text">3、在android/gradle.properties最后面添加如下内容:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、修改android-app-build-gradle文件"><span class="toc-number">4.</span> <span class="toc-text">4、修改android/app/build.gradle文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改-config-yml文件"><span class="toc-number">5.</span> <span class="toc-text">5、修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、下载安装hexo-deployer-git"><span class="toc-number">6.</span> <span class="toc-text">6、下载安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、发布到github"><span class="toc-number">7.</span> <span class="toc-text">7、发布到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml文件"><span class="toc-number">8.</span> <span class="toc-text">修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新发布"><span class="toc-number">9.</span> <span class="toc-text">重新发布</span></a></li></ol>
+		
+		</div>
+		
+		<h3 id="1、生成秘钥文件（在工程目录下）"><a href="#1、生成秘钥文件（在工程目录下）" class="headerlink" title="1、生成秘钥文件（在工程目录下）"></a>1、生成秘钥文件（在工程目录下）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000</div></pre></td></tr></table></figure>
 <h3 id="2、把刚生成的秘钥文件copy到android-app下"><a href="#2、把刚生成的秘钥文件copy到android-app下" class="headerlink" title="2、把刚生成的秘钥文件copy到android/app下"></a>2、把刚生成的秘钥文件copy到android/app下</h3><h3 id="3、在android-gradle-properties最后面添加如下内容"><a href="#3、在android-gradle-properties最后面添加如下内容" class="headerlink" title="3、在android/gradle.properties最后面添加如下内容:"></a>3、在android/gradle.properties最后面添加如下内容:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">MYAPP_RELEASE_STORE_FILE=my-release-key.keystore</div><div class="line">MYAPP_RELEASE_KEY_ALIAS=my-key-alias</div><div class="line">MYAPP_RELEASE_STORE_PASSWORD=123456 //刚才生成秘钥时设置的密码</div><div class="line">MYAPP_RELEASE_KEY_PASSWORD=123456   //刚才生成秘钥时设置的密码</div></pre></td></tr></table></figure>
 <h3 id="4、修改android-app-build-gradle文件"><a href="#4、修改android-app-build-gradle文件" class="headerlink" title="4、修改android/app/build.gradle文件"></a>4、修改android/app/build.gradle文件</h3><p>（1）添加如下文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
@@ -102,14 +114,9 @@
 <h3 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root: /blog/</div></pre></td></tr></table></figure>
 <p>“blog”是github仓库名</p>
 <h3 id="重新发布"><a href="#重新发布" class="headerlink" title="重新发布"></a>重新发布</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -117,85 +124,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://yoursite.com/2016/11/16/react-native打包离线apk/" data-title="React Native打包离线apk | changbin&#39;s blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/21/first-blog/" title="博客制作总结" itemprop="url">博客制作总结</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Changbin" target="_blank" itemprop="author">Changbin</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-21T04:47:10.551Z" itemprop="datePublished"> 发表于 2016-09-21</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>玩过博客感觉挺好玩的！写篇博客把流程总结下。这是我的github地址<a href="https://github.com/boi525" target="_blank" rel="external">github</a>。详细流程可参考<a href="http://www.isetsuna.com/hexo/theme-plugin" target="_blank" rel="external">setsun’s blog</a>.</p>
-<h3 id="1、使用npm安装hexo"><a href="#1、使用npm安装hexo" class="headerlink" title="1、使用npm安装hexo"></a>1、使用npm安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
-<h3 id="2、初始化hexo"><a href="#2、初始化hexo" class="headerlink" title="2、初始化hexo"></a>2、初始化hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hexo init blog</div></pre></td></tr></table></figure>
-<h3 id="3、生成静态页面"><a href="#3、生成静态页面" class="headerlink" title="3、生成静态页面"></a>3、生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
-<h3 id="4、启动本地服务，进行文章预览调试"><a href="#4、启动本地服务，进行文章预览调试" class="headerlink" title="4、启动本地服务，进行文章预览调试"></a>4、启动本地服务，进行文章预览调试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<h3 id="5、修改-config-yml文件"><a href="#5、修改-config-yml文件" class="headerlink" title="5、修改_config.yml文件"></a>5、修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  	<span class="built_in">type</span>: git</div><div class="line">  	repository:**********</div><div class="line">  	branch: gh-pages</div></pre></td></tr></table></figure>
-<h3 id="6、下载安装hexo-deployer-git"><a href="#6、下载安装hexo-deployer-git" class="headerlink" title="6、下载安装hexo-deployer-git"></a>6、下载安装hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h3 id="7、发布到github"><a href="#7、发布到github" class="headerlink" title="7、发布到github"></a>7、发布到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-<p><strong>此时需要注意:</strong> 打开网站会出现乱掉的情况，由于需要配置相应的路径</p>
-<h3 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root: /blog/</div></pre></td></tr></table></figure>
-<p>“blog”是github仓库名</p>
-<h3 id="重新发布"><a href="#重新发布" class="headerlink" title="重新发布"></a>重新发布</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/09/21/first-blog/"  title="博客制作总结">
+ <strong>下一篇：</strong><br/> 
+ <span>博客制作总结
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、生成秘钥文件（在工程目录下）"><span class="toc-number">1.</span> <span class="toc-text">1、生成秘钥文件（在工程目录下）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、把刚生成的秘钥文件copy到android-app下"><span class="toc-number">2.</span> <span class="toc-text">2、把刚生成的秘钥文件copy到android/app下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在android-gradle-properties最后面添加如下内容"><span class="toc-number">3.</span> <span class="toc-text">3、在android/gradle.properties最后面添加如下内容:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、修改android-app-build-gradle文件"><span class="toc-number">4.</span> <span class="toc-text">4、修改android/app/build.gradle文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改-config-yml文件"><span class="toc-number">5.</span> <span class="toc-text">5、修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、下载安装hexo-deployer-git"><span class="toc-number">6.</span> <span class="toc-text">6、下载安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、发布到github"><span class="toc-number">7.</span> <span class="toc-text">7、发布到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml文件"><span class="toc-number">8.</span> <span class="toc-text">修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新发布"><span class="toc-number">9.</span> <span class="toc-text">重新发布</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -326,12 +291,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -402,4 +444,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
