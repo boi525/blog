@@ -19,7 +19,7 @@
 <meta property="og:site_name" content="changbin's blog">
 <meta property="og:description" content="1、生成秘钥文件（在工程目录下）1keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
 2、把刚生成的秘钥文件copy到android/app下3、在android/gradle.properties最后面添加如下内容:12">
-<meta property="og:updated_time" content="2016-11-16T14:02:29.500Z">
+<meta property="og:updated_time" content="2016-11-18T00:49:49.245Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React Native打包离线apk">
 <meta name="twitter:description" content="1、生成秘钥文件（在工程目录下）1keytool -genkey -v -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
@@ -51,7 +51,7 @@
 				<h1 class="site-name"><a href="/" title="changbin&#39;s blog">changbin&#39;s blog</a></h1>
 				<h2 class="blog-motto"></h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -67,7 +67,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:yoursite.com">
 					</form>
 					
@@ -90,16 +90,16 @@
 		<a href="/about" title="Changbin" target="_blank" itemprop="author">Changbin</a>
 		
   <p class="article-time">
-    <time datetime="2016-11-16T13:30:55.688Z" itemprop="datePublished"> 发表于 2016-11-16</time>
+    <time datetime="2016-11-16T13:30:55.688Z" itemprop="datePublished"> Published 2016-11-16</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、生成秘钥文件（在工程目录下）"><span class="toc-number">1.</span> <span class="toc-text">1、生成秘钥文件（在工程目录下）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、把刚生成的秘钥文件copy到android-app下"><span class="toc-number">2.</span> <span class="toc-text">2、把刚生成的秘钥文件copy到android/app下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在android-gradle-properties最后面添加如下内容"><span class="toc-number">3.</span> <span class="toc-text">3、在android/gradle.properties最后面添加如下内容:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、修改android-app-build-gradle文件"><span class="toc-number">4.</span> <span class="toc-text">4、修改android/app/build.gradle文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改-config-yml文件"><span class="toc-number">5.</span> <span class="toc-text">5、修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、下载安装hexo-deployer-git"><span class="toc-number">6.</span> <span class="toc-text">6、下载安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、发布到github"><span class="toc-number">7.</span> <span class="toc-text">7、发布到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml文件"><span class="toc-number">8.</span> <span class="toc-text">修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新发布"><span class="toc-number">9.</span> <span class="toc-text">重新发布</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、生成秘钥文件（在工程目录下）"><span class="toc-number">1.</span> <span class="toc-text">1、生成秘钥文件（在工程目录下）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、把刚生成的秘钥文件copy到android-app下"><span class="toc-number">2.</span> <span class="toc-text">2、把刚生成的秘钥文件copy到android/app下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在android-gradle-properties最后面添加如下内容"><span class="toc-number">3.</span> <span class="toc-text">3、在android/gradle.properties最后面添加如下内容:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、修改android-app-build-gradle文件"><span class="toc-number">4.</span> <span class="toc-text">4、修改android/app/build.gradle文件</span></a></li></ol>
 		
 		</div>
 		
@@ -107,13 +107,7 @@
 <h3 id="2、把刚生成的秘钥文件copy到android-app下"><a href="#2、把刚生成的秘钥文件copy到android-app下" class="headerlink" title="2、把刚生成的秘钥文件copy到android/app下"></a>2、把刚生成的秘钥文件copy到android/app下</h3><h3 id="3、在android-gradle-properties最后面添加如下内容"><a href="#3、在android-gradle-properties最后面添加如下内容" class="headerlink" title="3、在android/gradle.properties最后面添加如下内容:"></a>3、在android/gradle.properties最后面添加如下内容:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">MYAPP_RELEASE_STORE_FILE=my-release-key.keystore</div><div class="line">MYAPP_RELEASE_KEY_ALIAS=my-key-alias</div><div class="line">MYAPP_RELEASE_STORE_PASSWORD=123456 //刚才生成秘钥时设置的密码</div><div class="line">MYAPP_RELEASE_KEY_PASSWORD=123456   //刚才生成秘钥时设置的密码</div></pre></td></tr></table></figure>
 <h3 id="4、修改android-app-build-gradle文件"><a href="#4、修改android-app-build-gradle文件" class="headerlink" title="4、修改android/app/build.gradle文件"></a>4、修改android/app/build.gradle文件</h3><p>（1）添加如下文件</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
-<h3 id="5、修改-config-yml文件"><a href="#5、修改-config-yml文件" class="headerlink" title="5、修改_config.yml文件"></a>5、修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  	<span class="built_in">type</span>: git</div><div class="line">  	repository:**********</div><div class="line">  	branch: gh-pages</div></pre></td></tr></table></figure>
-<h3 id="6、下载安装hexo-deployer-git"><a href="#6、下载安装hexo-deployer-git" class="headerlink" title="6、下载安装hexo-deployer-git"></a>6、下载安装hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h3 id="7、发布到github"><a href="#7、发布到github" class="headerlink" title="7、发布到github"></a>7、发布到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-<p><strong>此时需要注意:</strong> 打开网站会出现乱掉的情况，由于需要配置相应的路径</p>
-<h3 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root: /blog/</div></pre></td></tr></table></figure>
-<p>“blog”是github仓库名</p>
-<h3 id="重新发布"><a href="#重新发布" class="headerlink" title="重新发布"></a>重新发布</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
+<p><strong>静候</strong>后序</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -153,17 +147,17 @@
 	
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、生成秘钥文件（在工程目录下）"><span class="toc-number">1.</span> <span class="toc-text">1、生成秘钥文件（在工程目录下）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、把刚生成的秘钥文件copy到android-app下"><span class="toc-number">2.</span> <span class="toc-text">2、把刚生成的秘钥文件copy到android/app下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在android-gradle-properties最后面添加如下内容"><span class="toc-number">3.</span> <span class="toc-text">3、在android/gradle.properties最后面添加如下内容:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、修改android-app-build-gradle文件"><span class="toc-number">4.</span> <span class="toc-text">4、修改android/app/build.gradle文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改-config-yml文件"><span class="toc-number">5.</span> <span class="toc-text">5、修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、下载安装hexo-deployer-git"><span class="toc-number">6.</span> <span class="toc-text">6、下载安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、发布到github"><span class="toc-number">7.</span> <span class="toc-text">7、发布到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml文件"><span class="toc-number">8.</span> <span class="toc-text">修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新发布"><span class="toc-number">9.</span> <span class="toc-text">重新发布</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、生成秘钥文件（在工程目录下）"><span class="toc-number">1.</span> <span class="toc-text">1、生成秘钥文件（在工程目录下）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、把刚生成的秘钥文件copy到android-app下"><span class="toc-number">2.</span> <span class="toc-text">2、把刚生成的秘钥文件copy到android/app下</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、在android-gradle-properties最后面添加如下内容"><span class="toc-number">3.</span> <span class="toc-text">3、在android/gradle.properties最后面添加如下内容:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、修改android-app-build-gradle文件"><span class="toc-number">4.</span> <span class="toc-text">4、修改android/app/build.gradle文件</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -174,7 +168,7 @@
   
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -196,11 +190,11 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
   <div class="weiboshow">
-  <p class="asidetitle">新浪微博</p>
+  <p class="asidetitle">Weibo</p>
     <iframe width="100%" height="119" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=119&fansRow=2&ptype=1&speed=0&skin=9&isTitle=1&noborder=1&isWeibo=0&isFans=0&uid=null&verifier=b3593ceb&dpc=1"></iframe>
 </div>
 
@@ -427,7 +421,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
