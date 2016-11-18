@@ -4,38 +4,44 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>博客制作总结 | changbin&#39;s blog</title>
+    <title>JS逻辑运算符&amp;&amp;与||的短路运算 | changbin&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Changbin">
     
 
     
-    <meta name="description" content="玩过博客感觉挺好玩的！写篇博客把流程总结下。这是我的github地址github。详细流程可参考setsun’s blog.
-1、使用npm安装hexo1npm install -g hexo
-2、初始化hexo1Hexo init blog
-3、生成静态页面1hexo generate
-4、启动本地服务，进行文章预览调试1$ hexo deploy
-5、修改_config.yml文件1234de">
+    <meta name="description" content="小记
+
+最近看到一个面试题,题目如下:
+1alert(1&amp;amp;&amp;amp;2);//弹出什么？
+  正确的结果是 2.
+这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&amp;gt;（短路计算原则）。。。那么来研究研究吧~~~
+1.在MDN上面找到相应描述逻辑运算符的说明:
+逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="博客制作总结">
-<meta property="og:url" content="http://yoursite.com/2016/09/21/first-blog/index.html">
+<meta property="og:title" content="JS逻辑运算符&&与||的短路运算">
+<meta property="og:url" content="http://yoursite.com/2016/11/18/逻辑运算符/index.html">
 <meta property="og:site_name" content="changbin's blog">
-<meta property="og:description" content="玩过博客感觉挺好玩的！写篇博客把流程总结下。这是我的github地址github。详细流程可参考setsun’s blog.
-1、使用npm安装hexo1npm install -g hexo
-2、初始化hexo1Hexo init blog
-3、生成静态页面1hexo generate
-4、启动本地服务，进行文章预览调试1$ hexo deploy
-5、修改_config.yml文件1234de">
-<meta property="og:updated_time" content="2016-11-16T12:41:18.273Z">
+<meta property="og:description" content="小记
+
+最近看到一个面试题,题目如下:
+1alert(1&amp;amp;&amp;amp;2);//弹出什么？
+  正确的结果是 2.
+这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&amp;gt;（短路计算原则）。。。那么来研究研究吧~~~
+1.在MDN上面找到相应描述逻辑运算符的说明:
+逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr">
+<meta property="og:updated_time" content="2016-11-16T11:29:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="博客制作总结">
-<meta name="twitter:description" content="玩过博客感觉挺好玩的！写篇博客把流程总结下。这是我的github地址github。详细流程可参考setsun’s blog.
-1、使用npm安装hexo1npm install -g hexo
-2、初始化hexo1Hexo init blog
-3、生成静态页面1hexo generate
-4、启动本地服务，进行文章预览调试1$ hexo deploy
-5、修改_config.yml文件1234de">
+<meta name="twitter:title" content="JS逻辑运算符&&与||的短路运算">
+<meta name="twitter:description" content="小记
+
+最近看到一个面试题,题目如下:
+1alert(1&amp;amp;&amp;amp;2);//弹出什么？
+  正确的结果是 2.
+这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&amp;gt;（短路计算原则）。。。那么来研究研究吧~~~
+1.在MDN上面找到相应描述逻辑运算符的说明:
+逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr">
 
     
     <link rel="alternative" href="/atom.xml" title="changbin&#39;s blog" type="application/atom+xml">
@@ -95,14 +101,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/09/21/first-blog/" title="博客制作总结" itemprop="url">博客制作总结</a>
+      <a href="/2016/11/18/逻辑运算符/" title="JS逻辑运算符&amp;&amp;与||的短路运算" itemprop="url">JS逻辑运算符&amp;&amp;与||的短路运算</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Changbin" target="_blank" itemprop="author">Changbin</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-21T04:47:10.551Z" itemprop="datePublished"> 发表于 2016-09-21</time>
+    <time datetime="2016-11-18T03:18:53.402Z" itemprop="datePublished"> 发表于 2016-11-18</time>
     
   </p>
 </header>
@@ -111,22 +117,31 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、使用npm安装hexo"><span class="toc-number">1.</span> <span class="toc-text">1、使用npm安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、初始化hexo"><span class="toc-number">2.</span> <span class="toc-text">2、初始化hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、生成静态页面"><span class="toc-number">3.</span> <span class="toc-text">3、生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、启动本地服务，进行文章预览调试"><span class="toc-number">4.</span> <span class="toc-text">4、启动本地服务，进行文章预览调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改-config-yml文件"><span class="toc-number">5.</span> <span class="toc-text">5、修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、下载安装hexo-deployer-git"><span class="toc-number">6.</span> <span class="toc-text">6、下载安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、发布到github"><span class="toc-number">7.</span> <span class="toc-text">7、发布到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml文件"><span class="toc-number">8.</span> <span class="toc-text">修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新发布"><span class="toc-number">9.</span> <span class="toc-text">重新发布</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>玩过博客感觉挺好玩的！写篇博客把流程总结下。这是我的github地址<a href="https://github.com/boi525" target="_blank" rel="external">github</a>。详细流程可参考<a href="http://www.isetsuna.com/hexo/theme-plugin" target="_blank" rel="external">setsun’s blog</a>.</p>
-<h3 id="1、使用npm安装hexo"><a href="#1、使用npm安装hexo" class="headerlink" title="1、使用npm安装hexo"></a>1、使用npm安装hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g hexo</div></pre></td></tr></table></figure>
-<h3 id="2、初始化hexo"><a href="#2、初始化hexo" class="headerlink" title="2、初始化hexo"></a>2、初始化hexo</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hexo init blog</div></pre></td></tr></table></figure>
-<h3 id="3、生成静态页面"><a href="#3、生成静态页面" class="headerlink" title="3、生成静态页面"></a>3、生成静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
-<h3 id="4、启动本地服务，进行文章预览调试"><a href="#4、启动本地服务，进行文章预览调试" class="headerlink" title="4、启动本地服务，进行文章预览调试"></a>4、启动本地服务，进行文章预览调试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<h3 id="5、修改-config-yml文件"><a href="#5、修改-config-yml文件" class="headerlink" title="5、修改_config.yml文件"></a>5、修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  	<span class="built_in">type</span>: git</div><div class="line">  	repository:**********</div><div class="line">  	branch: gh-pages</div></pre></td></tr></table></figure>
-<h3 id="6、下载安装hexo-deployer-git"><a href="#6、下载安装hexo-deployer-git" class="headerlink" title="6、下载安装hexo-deployer-git"></a>6、下载安装hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h3 id="7、发布到github"><a href="#7、发布到github" class="headerlink" title="7、发布到github"></a>7、发布到github</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
-<p><strong>此时需要注意:</strong> 打开网站会出现乱掉的情况，由于需要配置相应的路径</p>
-<h3 id="修改-config-yml文件"><a href="#修改-config-yml文件" class="headerlink" title="修改_config.yml文件"></a>修改_config.yml文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">root: /blog/</div></pre></td></tr></table></figure>
-<p>“blog”是github仓库名</p>
-<h3 id="重新发布"><a href="#重新发布" class="headerlink" title="重新发布"></a>重新发布</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo deploy --generate</div></pre></td></tr></table></figure>
+		<blockquote>
+<p>小记</p>
+</blockquote>
+<p>最近看到一个面试题,题目如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(1&amp;&amp;2);//弹出什么？</div></pre></td></tr></table></figure>
+<p>  正确的结果是 2.</p>
+<p>这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&gt;（短路计算原则）。。。那么来研究研究吧~~~</p>
+<p>1.在MDN上面找到相应描述逻辑运算符的说明:</p>
+<p>逻辑与 (&amp;&amp;) expr1&amp;&amp;expr2 如果expr1 能转换成false则返回expr1,否则返回expr2. 因此, 在Boolean环境中使用时, 两个操作结果都为true时返回true,否则返回false.<br>逻辑或 (||) expr1||expr2 如果expr1能转换成true则返回expr1,否则返回expr2. 因此,在boolean环境(在if的条件判断中)中使用时, 二者操作结果中只要有一个为true,返回true;二者操作结果都为false时返回false.<br>逻辑非(!) !expr 如果单个表达式能转换为true的话返回false,否则返回true. </p>
+<p>能够转换为false的表达式有:false,””(空字符串),0和NaN,null,undefined.</p>
+<p>能够转化为true的值为:true,任何非空字符串，任何非零数字值(包括无穷大),任何对象</p>
+<p>以上规则已经再次确认，摘自”javascript高级程序设计(第3版)”这本书</p>
+<p>那么上面的题就好理解了，（1&amp;&amp;2）1返回的是true不是false所以无法返回第一个值,则返回的是数字2.</p>
+<ol>
+<li>短路计算原则:</li>
+</ol>
+<p>由于逻辑表达式的运算的顺序是从左到右,也可以用以下规则进行”短路”计算:<br>false &amp;&amp; (anything)  短路计算的结果为false.<br>true || (anything)  短路计算的结果为 true</p>
+<p>3.一些简单逻辑运算例子理解</p>
+<p>(1)逻辑与<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;a&quot; &amp;&amp; &quot;b&quot;     		//结果为 b</div><div class="line">false &amp;&amp; &quot;a&quot;     	// f &amp;&amp; t 结果为 false</div><div class="line">&quot;a&quot; &amp;&amp; false     	// t &amp;&amp; f 结果为 false</div><div class="line">true  &amp;&amp; 2 &amp;&amp; &quot;a&quot;   //结果为&quot;a&quot;</div></pre></td></tr></table></figure></p>
+<p>(2)逻辑或</p>
+<p>false || (2 == 4)        // f || f 结果为 false<br>“a” || “b”              // t || t 结果为 a<br>false || “a”          // f || t 结果为 a(这个例子非常迷惑人)<br>“a” || false          // t || f 结果为 a</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -139,7 +154,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/09/21/first-blog/" data-title="博客制作总结 | changbin&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/11/18/逻辑运算符/" data-title="JS逻辑运算符&amp;&amp;与||的短路运算 | changbin&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -153,13 +168,21 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/11/16/react-native打包离线apk/" title="React Native打包离线apk">
+ <a href="/2016/11/18/webpack/" title="webpack的搭建">
   <strong>上一篇：</strong><br/>
   <span>
-  React Native打包离线apk</span>
+  webpack的搭建</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2016/11/18/jsonp/"  title="JSONP">
+ <strong>下一篇：</strong><br/> 
+ <span>JSONP
+</span>
+</a>
+</div>
 
 </nav>
 
@@ -171,7 +194,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、使用npm安装hexo"><span class="toc-number">1.</span> <span class="toc-text">1、使用npm安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、初始化hexo"><span class="toc-number">2.</span> <span class="toc-text">2、初始化hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、生成静态页面"><span class="toc-number">3.</span> <span class="toc-text">3、生成静态页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、启动本地服务，进行文章预览调试"><span class="toc-number">4.</span> <span class="toc-text">4、启动本地服务，进行文章预览调试</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、修改-config-yml文件"><span class="toc-number">5.</span> <span class="toc-text">5、修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、下载安装hexo-deployer-git"><span class="toc-number">6.</span> <span class="toc-text">6、下载安装hexo-deployer-git</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、发布到github"><span class="toc-number">7.</span> <span class="toc-text">7、发布到github</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改-config-yml文件"><span class="toc-number">8.</span> <span class="toc-text">修改_config.yml文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#重新发布"><span class="toc-number">9.</span> <span class="toc-text">重新发布</span></a></li></ol>
+ 
  
   </div>
 
