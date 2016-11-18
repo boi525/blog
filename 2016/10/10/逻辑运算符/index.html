@@ -4,44 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>JS逻辑运算符&amp;&amp;与||的短路运算 | changbin&#39;s blog</title>
+    <title>逻辑运算符 | changbin&#39;s blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Changbin">
     
 
     
-    <meta name="description" content="小记
-
-最近看到一个面试题,题目如下:
-1alert(1&amp;amp;&amp;amp;2);//弹出什么？
-  正确的结果是 2.
-这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&amp;gt;（短路计算原则）。。。那么来研究研究吧~~~
-1.在MDN上面找到相应描述逻辑运算符的说明:
-逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr">
+    <meta name="description" content="1.在MDN上面找到相应描述逻辑运算符的说明:
+逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr1 能转换成false则返回expr1,否则返回expr2. 因此, 在Boolean环境中使用时, 两个操作结果都为true时返回true,否则返回false.逻辑或 (||) expr1||expr2 如果expr1能转换成true则返回expr1,否则返回e">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JS逻辑运算符&&与||的短路运算">
-<meta property="og:url" content="http://yoursite.com/2016/11/18/逻辑运算符/index.html">
+<meta property="og:title" content="逻辑运算符">
+<meta property="og:url" content="http://yoursite.com/2016/10/10/逻辑运算符/index.html">
 <meta property="og:site_name" content="changbin's blog">
-<meta property="og:description" content="小记
-
-最近看到一个面试题,题目如下:
-1alert(1&amp;amp;&amp;amp;2);//弹出什么？
-  正确的结果是 2.
-这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&amp;gt;（短路计算原则）。。。那么来研究研究吧~~~
-1.在MDN上面找到相应描述逻辑运算符的说明:
-逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr">
-<meta property="og:updated_time" content="2016-11-16T11:29:11.000Z">
+<meta property="og:description" content="1.在MDN上面找到相应描述逻辑运算符的说明:
+逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr1 能转换成false则返回expr1,否则返回expr2. 因此, 在Boolean环境中使用时, 两个操作结果都为true时返回true,否则返回false.逻辑或 (||) expr1||expr2 如果expr1能转换成true则返回expr1,否则返回e">
+<meta property="og:updated_time" content="2016-11-18T04:55:06.607Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JS逻辑运算符&&与||的短路运算">
-<meta name="twitter:description" content="小记
-
-最近看到一个面试题,题目如下:
-1alert(1&amp;amp;&amp;amp;2);//弹出什么？
-  正确的结果是 2.
-这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&amp;gt;（短路计算原则）。。。那么来研究研究吧~~~
-1.在MDN上面找到相应描述逻辑运算符的说明:
-逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr">
+<meta name="twitter:title" content="逻辑运算符">
+<meta name="twitter:description" content="1.在MDN上面找到相应描述逻辑运算符的说明:
+逻辑与 (&amp;amp;&amp;amp;) expr1&amp;amp;&amp;amp;expr2 如果expr1 能转换成false则返回expr1,否则返回expr2. 因此, 在Boolean环境中使用时, 两个操作结果都为true时返回true,否则返回false.逻辑或 (||) expr1||expr2 如果expr1能转换成true则返回expr1,否则返回e">
 
     
     <link rel="alternative" href="/atom.xml" title="changbin&#39;s blog" type="application/atom+xml">
@@ -101,14 +83,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/11/18/逻辑运算符/" title="JS逻辑运算符&amp;&amp;与||的短路运算" itemprop="url">JS逻辑运算符&amp;&amp;与||的短路运算</a>
+      <a href="/2016/10/10/逻辑运算符/" title="逻辑运算符" itemprop="url">逻辑运算符</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Changbin" target="_blank" itemprop="author">Changbin</a>
 		
   <p class="article-time">
-    <time datetime="2016-11-18T03:18:53.402Z" itemprop="datePublished"> Published 2016-11-18</time>
+    <time datetime="2016-10-10T12:14:12.000Z" itemprop="datePublished"> Published 2016-10-10</time>
     
   </p>
 </header>
@@ -121,14 +103,7 @@
 		
 		</div>
 		
-		<blockquote>
-<p>小记</p>
-</blockquote>
-<p>最近看到一个面试题,题目如下:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(1&amp;&amp;2);//弹出什么？</div></pre></td></tr></table></figure>
-<p>  正确的结果是 2.</p>
-<p>这结果让我觉得自己对于逻辑运算符的理解还很浅~在网上搜集了一下资料，发现一个专业名词–&gt;（短路计算原则）。。。那么来研究研究吧~~~</p>
-<p>1.在MDN上面找到相应描述逻辑运算符的说明:</p>
+		<p>1.在MDN上面找到相应描述逻辑运算符的说明:</p>
 <p>逻辑与 (&amp;&amp;) expr1&amp;&amp;expr2 如果expr1 能转换成false则返回expr1,否则返回expr2. 因此, 在Boolean环境中使用时, 两个操作结果都为true时返回true,否则返回false.<br>逻辑或 (||) expr1||expr2 如果expr1能转换成true则返回expr1,否则返回expr2. 因此,在boolean环境(在if的条件判断中)中使用时, 二者操作结果中只要有一个为true,返回true;二者操作结果都为false时返回false.<br>逻辑非(!) !expr 如果单个表达式能转换为true的话返回false,否则返回true. </p>
 <p>能够转换为false的表达式有:false,””(空字符串),0和NaN,null,undefined.</p>
 <p>能够转化为true的值为:true,任何非空字符串，任何非零数字值(包括无穷大),任何对象</p>
@@ -154,7 +129,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/11/18/逻辑运算符/" data-title="JS逻辑运算符&amp;&amp;与||的短路运算 | changbin&#39;s blog" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/10/10/逻辑运算符/" data-title="逻辑运算符 | changbin&#39;s blog" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -167,11 +142,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/11/08/webpack/" title="webpack">
+  <strong>上一篇：</strong><br/>
+  <span>
+  webpack</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/2016/11/18/jsonp/"  title="JSONP">
+<a href="/2016/09/21/first-blog/"  title="博客制作总结">
  <strong>下一篇：</strong><br/> 
- <span>JSONP
+ <span>博客制作总结
 </span>
 </a>
 </div>
