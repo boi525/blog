@@ -242,33 +242,72 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/10/10/逻辑运算符/" title="逻辑运算符" itemprop="url">逻辑运算符</a>
+      <a href="/2016/09/25/git及github使用/" title="git及github使用" itemprop="url">git及github使用</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Changbin" target="_blank" itemprop="author">Changbin</a>
 		
   <p class="article-time">
-    <time datetime="2016-10-10T12:14:12.000Z" itemprop="datePublished"> Published 2016-10-10</time>
+    <time datetime="2016-09-25T02:28:02.000Z" itemprop="datePublished"> Published 2016-09-25</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <p>1.在MDN上面找到相应描述逻辑运算符的说明:</p>
-<p>逻辑与 (&amp;&amp;) expr1&amp;&amp;expr2 如果expr1 能转换成false则返回expr1,否则返回expr2. 因此, 在Boolean环境中使用时, 两个操作结果都为true时返回true,否则返回false.<br>逻辑或 (||) expr1||expr2 如果expr1能转换成true则返回expr1,否则返回expr2. 因此,在boolean环境(在if的条件判断中)中使用时, 二者操作结果中只要有一个为true,返回true;二者操作结果都为false时返回false.<br>逻辑非(!) !expr 如果单个表达式能转换为true的话返回false,否则返回true. </p>
-<p>能够转换为false的表达式有:false,””(空字符串),0和NaN,null,undefined.</p>
-<p>能够转化为true的值为:true,任何非空字符串，任何非零数字值(包括无穷大),任何对象</p>
-<p>以上规则已经再次确认，摘自”javascript高级程序设计(第3版)”这本书</p>
-<p>那么上面的题就好理解了，（1&amp;&amp;2）1返回的是true不是false所以无法返回第一个值,则返回的是数字2.</p>
-<ol>
-<li>短路计算原则:</li>
-</ol>
-<p>由于逻辑表达式的运算的顺序是从左到右,也可以用以下规则进行”短路”计算:<br>false &amp;&amp; (anything)  短路计算的结果为false.<br>true || (anything)  短路计算的结果为 true</p>
-<p>3.一些简单逻辑运算例子理解</p>
-<p>(1)逻辑与<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&quot;a&quot; &amp;&amp; &quot;b&quot;     		//结果为 b</div><div class="line">false &amp;&amp; &quot;a&quot;     	// f &amp;&amp; t 结果为 false</div><div class="line">&quot;a&quot; &amp;&amp; false     	// t &amp;&amp; f 结果为 false</div><div class="line">true  &amp;&amp; 2 &amp;&amp; &quot;a&quot;   //结果为&quot;a&quot;</div></pre></td></tr></table></figure></p>
-<p>(2)逻辑或</p>
-<p>false || (2 == 4)        // f || f 结果为 false<br>“a” || “b”              // t || t 结果为 a<br>false || “a”          // f || t 结果为 a(这个例子非常迷惑人)<br>“a” || false          // t || f 结果为 a</p>
+        <h2 id="一、Git"><a href="#一、Git" class="headerlink" title="一、Git"></a>一、Git</h2><h3 id="1-什么是Git"><a href="#1-什么是Git" class="headerlink" title="1.什么是Git"></a>1.什么是Git</h3><ul>
+<li>分布式的源代码管理工具</li>
+<li>在一个项目中，凡是有开发人员编写的代码都是都算是源代码</li>
+<li>GIT是Linux之父（Linus Torvalds，被誉为活着的传奇）为了维护管理Linux源码写的一个工具</li>
+<li>Git之前很多使用svn，vss，tfs，hs。。。</li>
+</ul>
+<h3 id="2-Git安装"><a href="#2-Git安装" class="headerlink" title="2.Git安装"></a>2.Git安装</h3><p>安装相关的Git的客户端（命令行的）<br>安装界面化的Git客户端SourceTree（tortoisegit，smartgit）</p>
+<h3 id="3-Git命令速查"><a href="#3-Git命令速查" class="headerlink" title="3.Git命令速查"></a>3.Git命令速查</h3><table>
+<thead>
+<tr>
+<th>git  init</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git add .</td>
+</tr>
+<tr>
+<td>git commit -m “first commit”</td>
+</tr>
+<tr>
+<td>git remote add origin</td>
+<td style="text-align:right"><a href="https://github.com/boi525/fdfdfd.git" target="_blank" rel="external">https://github.com/boi525/fdfdfd.git</a></td>
+</tr>
+<tr>
+<td>git push -u origin master</td>
+</tr>
+</tbody>
+</table>
+<p><strong> 获得密钥 </strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"email"</span></div></pre></td></tr></table></figure></p>
+<p>email是你注册在github上的邮箱</p>
+<h3 id="4-Git简单使用"><a href="#4-Git简单使用" class="headerlink" title="4.Git简单使用"></a>4.Git简单使用</h3><p> <strong>4.1 使用git init初始化一个本地仓库</strong><br> 会在本地文件夹中添加一个.git文件夹，用于记录项目所有的变更信息。</p>
+<p> <strong>4.2 git status</strong><br>用于查看本地仓储的变更状态。第一次查看，会显示未被跟踪的文件。<br>-s参数: 输出简要的变更日志。</p>
+<p> <strong>4.3 git add .</strong><br>将没有被跟踪的文件添加到跟踪列表(相当于git add –all)</p>
+<p><strong>4.4 本地忽略清单</strong><br>在.gitignore文件中添加相应的忽略清单</p>
+<p> <strong>4.5 提交</strong><br>Git commit: 将本地的变化提交到本地的仓库文件夹归档<br>Git commit -m “说明”（必须有提交日志）</p>
+<p> <strong>4.6 Git config</strong><br>git config –global user.email “you@example.com”<br>git config –global user.name “Your Name”</p>
+<p> <strong>4.7. Git diff</strong><br>比较当前文件和文件的状态</p>
+<p> <strong>4.8. Git log</strong><br>   git log -p</p>
+<p> <strong>4.9. Git reset –hard “哈希值”</strong><br>   将代码回归到此处</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结:"></a>总结:</h3><ul>
+<li>Git不需要服务器，但是都需要，因为需要协同开发。</li>
+<li>Git服务器，用来同步本地的代码仓库</li>
+<li>Git是一个工具，github是一个网站（提供了远程仓库的功能）</li>
+<li>Github网站提供的就是git服务（免费的服务，但是你提交的代码必须是开源的。）</li>
+</ul>
+<h2 id="二、Github"><a href="#二、Github" class="headerlink" title="二、Github"></a>二、Github</h2><h3 id="1-github基本介绍"><a href="#1-github基本介绍" class="headerlink" title="1.github基本介绍"></a>1.github基本介绍</h3><p><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a><br>Github是一个git服务的提供商(提出社交化编程)</p>
+<h3 id="2-创建用户"><a href="#2-创建用户" class="headerlink" title="2.创建用户"></a>2.创建用户</h3><p>在github中创建一个账户，并且创建一个空的远程仓库。</p>
+<h3 id="3-远程提交"><a href="#3-远程提交" class="headerlink" title="3.远程提交"></a>3.远程提交</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Git remote -v  </div><div class="line">git remote add origin https://github.com/kuaixiangai/git-demo.git</div><div class="line">git remote rm origin（删除远程仓库信息）</div><div class="line">git push -u origin master</div></pre></td></tr></table></figure>
+<h3 id="4-远程拉取"><a href="#4-远程拉取" class="headerlink" title="4.远程拉取"></a>4.远程拉取</h3><p>Git clone （克隆相关的代码）<br>Git pull origin master （拉取最新的代码）</p>
+<h2 id="三、Github页面其他的功能"><a href="#三、Github页面其他的功能" class="headerlink" title="三、Github页面其他的功能"></a>三、Github页面其他的功能</h2><h3 id="1-Gist"><a href="#1-Gist" class="headerlink" title="1.Gist"></a>1.Gist</h3><p>保留代码片段</p>
+<h3 id="2-git分支"><a href="#2-git分支" class="headerlink" title="2.git分支"></a>2.git分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Git branch: 查看分支</div><div class="line">Git branch “分支名称”</div><div class="line">Git checkout v2: 切换分支</div><div class="line">Git push -u origin v2</div></pre></td></tr></table></figure>
+<h3 id="3-托管页面"><a href="#3-托管页面" class="headerlink" title="3.托管页面"></a>3.托管页面</h3><p><a href="http://pages.github.com/（使用教程）" target="_blank" rel="external">http://pages.github.com/（使用教程）</a><br>分支名必须是gh-pages</p>
 
         
         
