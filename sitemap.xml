@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2016/10/28/json/</loc>
-    
-    <lastmod>2016-11-18T05:03:27.816Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2016/11/08/webpack/</loc>
     
     <lastmod>2016-11-18T04:57:40.336Z</lastmod>
