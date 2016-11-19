@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/11/16/react-native%E6%89%93%E5%8C%85%E7%A6%BB%E7%BA%BFapk/</loc>
+    
+    <lastmod>2016-11-19T08:58:08.981Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/09/21/first-blog/</loc>
+    
+    <lastmod>2016-11-19T03:50:53.986Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/09/25/git%E5%8F%8Agithub%E4%BD%BF%E7%94%A8/</loc>
     
     <lastmod>2016-11-19T03:16:23.077Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>http://yoursite.com/2016/11/08/webpack/</loc>
     
     <lastmod>2016-11-18T04:57:40.336Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/11/16/react-native%E6%89%93%E5%8C%85%E7%A6%BB%E7%BA%BFapk/</loc>
-    
-    <lastmod>2016-11-18T03:45:15.372Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2016/09/21/first-blog/</loc>
-    
-    <lastmod>2016-11-16T12:41:18.273Z</lastmod>
     
   </url>
   
